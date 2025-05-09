@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using SupermarketWEB.Models;
+
 
 namespace SupermarketWEB.Models
 {
