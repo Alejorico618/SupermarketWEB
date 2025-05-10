@@ -9,26 +9,29 @@
 <form method="post">
     <div>
         <label asp-for="Product.Name"></label>
-        <input asp-for="Product.Name" />
-        <span asp-validation-for="Product.Name"></span>
+        <input asp-for="Product.Name" class="form-control" />
+        <span asp-validation-for="Product.Name" class="text-danger"></span>
     </div>
     <div>
         <label asp-for="Product.Price"></label>
-        <input asp-for="Product.Price" />
-        <span asp-validation-for="Product.Price"></span>
+        <input asp-for="Product.Price" class="form-control" />
+        <span asp-validation-for="Product.Price" class="text-danger"></span>
     </div>
     <div>
         <label asp-for="Product.Stock"></label>
-        <input asp-for="Product.Stock" />
-        <span asp-validation-for="Product.Stock"></span>
+        <input asp-for="Product.Stock" class="form-control" />
+        <span asp-validation-for="Product.Stock" class="text-danger"></span>
     </div>
     <div>
-        <label asp-for="Product.CategoryId"></label>
-        <input asp-for="Product.CategoryId" />
-        <span asp-validation-for="Product.CategoryId"></span>
+        <label asp-for="Product.CategoryId">Category</label>
+        <select asp-for="Product.CategoryId" asp-items="Model.Categories" class="form-control"></select>
+        <span asp-validation-for="Product.CategoryId" class="text-danger"></span>
     </div>
-    <input type="submit" value="Create" class="btn btn-success" />
+    <br />
+    <button type="submit" class="btn btn-success">Create</button>
     <a asp-page="Index" class="btn btn-primary">Back to List</a>
 </form>
 
-<a asp-page="Index">Back to List</a>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
