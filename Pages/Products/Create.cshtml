@@ -1,4 +1,34 @@
 ﻿@page
 @model SupermarketWEB.Pages.Products.CreateModel
 @{
+    ViewData["Title"] = "Create Product";
 }
+
+<h1>Create Product</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="Product.Name"></label>
+        <input asp-for="Product.Name" />
+        <span asp-validation-for="Product.Name"></span>
+    </div>
+    <div>
+        <label asp-for="Product.Price"></label>
+        <input asp-for="Product.Price" />
+        <span asp-validation-for="Product.Price"></span>
+    </div>
+    <div>
+        <label asp-for="Product.Stock"></label>
+        <input asp-for="Product.Stock" />
+        <span asp-validation-for="Product.Stock"></span>
+    </div>
+    <div>
+        <label asp-for="Product.CategoryId"></label>
+        <input asp-for="Product.CategoryId" />
+        <span asp-validation-for="Product.CategoryId"></span>
+    </div>
+    <input type="submit" value="Create" class="btn btn-success" />
+    <a asp-page="Index" class="btn btn-primary">Back to List</a>
+</form>
+
+<a asp-page="Index">Back to List</a>
