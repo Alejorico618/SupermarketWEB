@@ -11,7 +11,7 @@ using SupermarketWEB.Data;
 namespace SupermarketWEB.Migrations
 {
     [DbContext(typeof(SupermarketContext))]
-    [Migration("20250509214336_AddProvidersAndPayModes")]
+    [Migration("20250510071043_AddProvidersAndPayModes")]
     partial class AddProvidersAndPayModes
     {
         /// <inheritdoc />
@@ -56,8 +56,9 @@ namespace SupermarketWEB.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                    b.Property<string>("MetodoPago")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

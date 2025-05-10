@@ -1,7 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using SupermarketWEB.Models;
-
-
 
 namespace SupermarketWEB.Models
 {
@@ -13,6 +10,8 @@ namespace SupermarketWEB.Models
         public string? Description { get; set; }
 
         [Required]
-        public bool IsActive { get; set; }
+        public required string MetodoPago { get; set; }
+
+
     }
 }

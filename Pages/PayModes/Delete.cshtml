@@ -10,11 +10,11 @@
 
 <div>
     <h4>@Model.PayMode.Description</h4>
-    <p>Is Active: @Model.PayMode.IsActive</p>
+    <p>Is Active: @Model.PayMode.MetodoPago</p>
 </div>
 
 <form method="post">
     <input type="hidden" asp-for="PayMode.Id" />
-    <button type="submit">Delete</button>
-    <a asp-page="Index">Cancel</a>
+    <input type="submit" value="Delete" class="btn btn-danger" /> |
+    <a asp-page="./Index" class="btn btn-primary">Back to List</a>
 </form>

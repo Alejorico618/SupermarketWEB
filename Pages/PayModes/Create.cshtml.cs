@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SupermarketWEB.Models;
 
-
 namespace SupermarketWEB.Pages.PayModes
 {
     public class CreateModel : PageModel
@@ -21,7 +20,7 @@ namespace SupermarketWEB.Pages.PayModes
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid || PayMode== null)
+            if (!ModelState.IsValid || PayMode == null)
                 return Page();
 
             _context.PayModes.Add(PayMode);

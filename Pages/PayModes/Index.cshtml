@@ -7,28 +7,29 @@
 <h1>Pay Modes</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="./Create" class="btn btn-success"> Agregar pago</a>
 </p>
+
 
 <table class="table">
     <thead>
         <tr>
             <th>Description</th>
-            <th>Is Active</th>
+            <th>MetodoPago</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.PayModes)
-        {
-            <tr>
-                <td>@item.Description</td>
-                <td>@item.IsActive</td>
-                <td>
-                    <a asp-page="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-page="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-        }
+    @foreach (var item in Model.PayModes)
+    {
+        <tr>
+            <td>@item.Description</td>
+                <td>@item.MetodoPago</td>
+            <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm"> Edit</a>
+                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm"> Delete</a>
+            </td>
+        </tr>
+    }
     </tbody>
 </table>

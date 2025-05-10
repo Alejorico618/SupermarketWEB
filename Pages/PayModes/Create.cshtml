@@ -13,11 +13,12 @@
         <span asp-validation-for="PayMode.Description"></span>
     </div>
     <div>
-        <label asp-for="PayMode.IsActive"></label>
-        <input asp-for="PayMode.IsActive" />
-        <span asp-validation-for="PayMode.IsActive"></span>
+        <label asp-for="PayMode.MetodoPago"></label>
+        <input asp-for="PayMode.MetodoPago" />
+        <span asp-validation-for="PayMode.MetodoPago"></span>
     </div>
-    <button type="submit">Create</button>
+    <input type="submit" value="Create" class="btn btn-success" />
+    <a asp-page="Index" class="btn btn-primary">Back to List</a>
 </form>
 
 <a asp-page="Index">Back to List</a>
