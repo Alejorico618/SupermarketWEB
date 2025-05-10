@@ -1,4 +1,35 @@
-﻿@page
+﻿@page "{id:int}"
 @model SupermarketWEB.Pages.Products.EditModel
 @{
+    ViewData["Title"] = "Edit Product";
 }
+
+<h1>Edit Product</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Product.Id" />
+    <div>
+        <label asp-for="Product.Name"></label>
+        <input asp-for="Product.Name" />
+        <span asp-validation-for="Product.Name"></span>
+    </div>
+    <div>
+        <label asp-for="Product.Price"></label>
+        <input asp-for="Product.Price" />
+        <span asp-validation-for="Product.Price"></span>
+    </div>
+    <div>
+        <label asp-for="Product.Stock"></label>
+        <input asp-for="Product.Stock" />
+        <span asp-validation-for="Product.Stock"></span>
+    </div>
+    <div>
+        <label asp-for="Product.CategoryId"></label>
+        <input asp-for="Product.CategoryId" />
+        <span asp-validation-for="Product.CategoryId"></span>
+    </div>
+    <input type="submit" value="Save" class="btn btn-success" />
+    <a asp-page="./Index" class="btn btn-primary">Back to List</a>
+</form>
+
+<a asp-page="Index">Back to List</a>
