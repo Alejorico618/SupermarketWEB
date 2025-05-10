@@ -1,4 +1,20 @@
-﻿@page
-@model SupermarketWEB.Pages.PayMode.DeleteModel
+﻿@page "{id:int}"
+@model SupermarketWEB.Pages.PayModes.DeleteModel
 @{
+    ViewData["Title"] = "Delete Pay Mode";
 }
+
+<h1>Delete Pay Mode</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+
+<div>
+    <h4>@Model.PayMode.Description</h4>
+    <p>Is Active: @Model.PayMode.IsActive</p>
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="PayMode.Id" />
+    <button type="submit">Delete</button>
+    <a asp-page="Index">Cancel</a>
+</form>

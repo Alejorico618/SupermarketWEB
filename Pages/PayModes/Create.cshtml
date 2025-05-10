@@ -1,1 +1,23 @@
-﻿
+﻿@page
+@model SupermarketWEB.Pages.PayModes.CreateModel
+@{
+    ViewData["Title"] = "Create PayMode";
+}
+
+<h1>Create Pay Mode</h1>
+
+<form method="post">
+    <div>
+        <label asp-for="PayMode.Description"></label>
+        <input asp-for="PayMode.Description" />
+        <span asp-validation-for="PayMode.Description"></span>
+    </div>
+    <div>
+        <label asp-for="PayMode.IsActive"></label>
+        <input asp-for="PayMode.IsActive" />
+        <span asp-validation-for="PayMode.IsActive"></span>
+    </div>
+    <button type="submit">Create</button>
+</form>
+
+<a asp-page="Index">Back to List</a>
